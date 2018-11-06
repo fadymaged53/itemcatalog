@@ -1,0 +1,36 @@
+<html>
+
+<body>
+<a href = "{{url_for('gdisconnect') }}">sign out</a>
+
+<h1 style="font-size:50px;">{{brand.name}}</h1>
+
+<a href = "{{url_for('newMenuItem', brand_id = brand.id) }}">
+ADD CAR model</a>
+
+<div >
+{% for model in models %}
+
+    <div>
+
+<a href = "{{url_for('getdiscription', brand_id=brand.id,model_id=model.id)}}">
+
+    <h3>{{model.name}}</h3>
+</a>
+
+
+<a href="{{url_for('editMenuItem',brand_id=brand.id,model_id=model.id ) }}"> Edit</a>
+
+</br>
+<a href = "{{url_for('deleteMenuItem', brand_id=brand.id , model_id=model.id) }}"> Delete</a>
+
+
+
+
+</div>
+
+{% endfor %}
+</div>
+</body>
+
+</html>

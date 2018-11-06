@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1> edit car model </h1>
+
+<form action="{{url_for('editMenuItem', brand_id=brand_id ,model_id=model_id)}}" method = 'POST'>
+
+<p>Name :</p>
+
+<input type='text' size='30' name='name'>
+
+<p>cc :</p>
+
+<input type='text' size='30' name='cc'>
+
+<p>description :</p>
+
+<input type='text' size='30' name='description'>
+
+
+<input type='submit' value='edit'>
+
+</form>
+
+</body>
+</html>

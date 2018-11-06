@@ -1,0 +1,27 @@
+<html>
+
+<body>
+<a href = "{{url_for('showLogin')}}"> <h3>sign in</h3></a>
+
+<h1 style="font-size:50px;">{{brand.name}}</h1>
+
+<div >
+{% for model in models %}
+
+    <div>
+
+<a href = "{{url_for('getdiscription', brand_id=brand.id,model_id=model.id)}}">
+
+    <h3>{{model.name}}</h3>
+
+</a>
+
+
+
+</div>
+
+{% endfor %}
+</div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<html>
+
+<body>
+<a href = "{{url_for('showLogin')}}"> <h3>sign in</h3></a>
+<h1 style="font-size:50px;" >BRANDS</h1>
+
+<div >
+{% for brand in brands %}
+
+    <div>
+
+<a href = "{{url_for('showbrand', brand_id = brand.id)}}"> <h3>{{brand.name}}</h3></a>
+
+
+
+</div>
+
+{% endfor %}
+</div>
+</body>
+
+</html>
